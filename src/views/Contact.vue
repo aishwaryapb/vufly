@@ -1,5 +1,5 @@
 <template>
-  <div class="top-spacing flex center container">
+  <div class="flex center container" :class="menuOpen ? 'no-space' : 'top-spacing'">
     <div class="form-container">
       <h1 class="primary-text">Contact Us</h1>
       <Form />
@@ -9,10 +9,14 @@
 
 <script>
 import Form from "../components/Form";
+import { mapState } from "vuex";
 export default {
   components: {
     Form
-  }
+  },
+  computed: mapState({
+    menuOpen: state => state.header.menuOpen
+  })
 };
 </script>
 

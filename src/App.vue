@@ -59,9 +59,21 @@ body,
 .top-spacing {
   margin-top: 10vh;
 
+  @media @mobileL {
+    margin-top: 8vh;
+  }
+
+  @media @tablet {
+    margin-top: 4vh;
+  }
+
   @media @ipadPro {
     margin-top: 4vh;
   }
+}
+
+.no-space {
+  margin-top: 0;
 }
 
 .router-link-exact-active {

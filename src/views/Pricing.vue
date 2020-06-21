@@ -1,5 +1,5 @@
 <template>
-  <div class="top-spacing">
+  <div :class="menuOpen ? 'no-space' : 'top-spacing'">
     <div class="container">
       <div class="heading">
         <h1>Pricing</h1>
@@ -15,11 +15,15 @@
 <script>
 import CONFIG from "../config";
 import PricingCard from "../components/PricingCard";
+import { mapState } from "vuex";
 export default {
   name: "Pricing",
   components: {
     PricingCard
   },
+  computed: mapState({
+    menuOpen: state => state.header.menuOpen
+  }),
   data: function() {
     return {
       pricingItems: CONFIG.pricingModels
