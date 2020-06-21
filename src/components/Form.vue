@@ -4,14 +4,28 @@
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="text" name="email" placeholder="Email" required />
       <select id="subscription" name="subscription">
-        <option value="Free">Free</option>
-        <option value="Premium" selected>Premium</option>
+        <option value="Free" :selected="getIsSelected('free')">Free</option>
+        <option value="Premium" :selected="getIsSelected('premium')">Premium</option>
       </select>
       <textarea name="message" placeholder="Message"></textarea>
       <input type="submit" class="primary-btn" />
     </form>
   </div>
 </template>
+
+<script>
+import { mapState } from "vuex";
+export default {
+  computed: mapState({
+    selectedPlan: state => state.pricing.selectedPlan
+  }),
+  methods: {
+    getIsSelected(value) {
+      return this.selectedPlan === value;
+    }
+  }
+};
+</script>
 
 <style lang="less" scoped>
 .form {

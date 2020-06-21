@@ -6,7 +6,10 @@
     <div class="sub-header">
       <h1 :class="{'primary-text': item.isPremium}">{{item.price}}</h1>
       <p>{{item.subTitle}}</p>
-      <button :class="item.isPremium ? 'primary-btn' : 'grey-btn'">Select</button>
+      <button
+        :class="item.isPremium ? 'primary-btn' : 'grey-btn'"
+        @click="handleSelect(item.title.toLowerCase())"
+      >Select</button>
     </div>
     <div class="features">
       <ul>
@@ -20,10 +23,16 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "PricingCard",
   props: ["item"],
   methods: {
+    ...mapActions("pricing", ["selectPlan"]),
+    handleSelect(plan) {
+      this.selectPlan(plan);
+      this.$router.push("/contact");
+    },
     getIcon(feature) {
       return require(`../assets/icons/${
         feature.included ? "checked.svg" : "cross.svg"
