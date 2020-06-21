@@ -76,7 +76,7 @@ body,
   margin-top: 0;
 }
 
-.router-link-exact-active {
+.router-link-exact-active:not(.no-style-link) {
   margin-top: 2px;
   border-bottom: 3px solid @primary;
 }

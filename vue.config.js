@@ -24,10 +24,10 @@ module.exports = {
 	},
 	configureWebpack: {
 		plugins: [
-			new PrerenderSPAPlugin({
-				staticDir: path.join(__dirname, 'dist'),
-				routes: ['/', '/about', '/pricing', '/contact'],
-			})
+			new PrerenderSPAPlugin(
+				path.join(__dirname, '../dist'),
+				['/', '/about', '/pricing', '/contact']
+			)
 		]
 	}
 };

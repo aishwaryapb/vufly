@@ -6,10 +6,12 @@
     <div class="sub-header">
       <h1 :class="{'primary-text': item.isPremium}">{{item.price}}</h1>
       <p>{{item.subTitle}}</p>
-      <button
-        :class="item.isPremium ? 'primary-btn' : 'grey-btn'"
-        @click="handleSelect(item.title.toLowerCase())"
-      >Select</button>
+      <router-link to="/contact" class="no-style-link">
+        <button
+          :class="item.isPremium ? 'primary-btn' : 'grey-btn'"
+          @click="selectPlan(item.title.toLowerCase())"
+        >Select</button>
+      </router-link>
     </div>
     <div class="features">
       <ul>
@@ -29,10 +31,6 @@ export default {
   props: ["item"],
   methods: {
     ...mapActions("pricing", ["selectPlan"]),
-    handleSelect(plan) {
-      this.selectPlan(plan);
-      this.$router.push("/contact");
-    },
     getIcon(feature) {
       return require(`../assets/icons/${
         feature.included ? "checked.svg" : "cross.svg"

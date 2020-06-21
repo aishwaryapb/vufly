@@ -1,7 +1,9 @@
 <template>
   <div>
     <div id="nav-container">
-      <img id="logo" src="../assets/images/Logo.png" alt="Logo" @click="goHome" />
+      <router-link to="/" class="no-style-link">
+        <img id="logo" src="../assets/images/Logo.png" alt="Logo" />
+      </router-link>
       <div id="links">
         <router-link to="/about">About</router-link>
         <router-link to="/pricing">Pricing</router-link>
@@ -26,9 +28,6 @@ export default {
     menuOpen: state => state.header.menuOpen
   }),
   methods: {
-    goHome() {
-      this.$router.push("/");
-    },
     ...mapActions("header", ["toggleMenu"]),
     getIcon() {
       return this.menuOpen
