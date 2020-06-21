@@ -3,7 +3,7 @@
 
  <g>
   <title>background</title>
-  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <rect fill="none" id="canvas_background_hero" height="402" width="582" y="-1" x="-1"/>
  </g>
  <g>
   <title>Layer 1</title>

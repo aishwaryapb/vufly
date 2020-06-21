@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="container">
+    <div id="nav-container">
       <img id="logo" src="../assets/images/Logo.png" alt="Logo" @click="goHome" />
       <div id="links">
         <router-link to="/about">About</router-link>
@@ -8,7 +8,7 @@
         <router-link to="/contact">Contact</router-link>
       </div>
       <div class="menu-icon">
-        <img :src="getIcon()" @click="toggleMenu()" />
+        <img :src="getIcon()" @click="toggleMenu()" alt="menu icon" />
       </div>
     </div>
     <div class="mobile-menu" :class="menuOpen ? '' : 'hide-menu'">
@@ -41,7 +41,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-#container {
+#nav-container {
   display: flex;
   width: 100%;
   box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);

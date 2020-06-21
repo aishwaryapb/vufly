@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="hero-container">
     <div id="hero-text">
       <h1>
         Solutions made
@@ -34,7 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-#container {
+#hero-container {
   display: flex;
   width: 100%;
   height: 100%;

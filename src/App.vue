@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="main-app">
     <NavBar />
     <router-view />
   </div>
@@ -23,12 +23,12 @@ export default {
 
 html,
 body,
-#app {
+#main-app {
   margin: 0;
   height: 100%;
 }
 
-#app {
+#main-app {
   font-family: "Helvetica";
 }
 

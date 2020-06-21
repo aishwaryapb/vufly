@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full">
     <div id="img-container">
-      <img src="../assets/images/About.svg" />
+      <img src="../assets/images/About.svg" alt="about us" />
     </div>
     <div id="text-container">
       <h1>Our Mission</h1>
