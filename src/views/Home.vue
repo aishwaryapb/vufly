@@ -13,6 +13,17 @@ export default {
   },
   computed: mapState({
     menuOpen: state => state.header.menuOpen
-  })
+  }),
+  metaInfo: {
+    title: "VueFly",
+    titleTemplate: "%s | Home",
+    meta: [
+      {
+        name: "description",
+        content:
+          "VueFly provides a simple solution to all your business needs. Plug into our software and play it whenever. Solutions made as simple as flying a kite"
+      }
+    ]
+  }
 };
 </script>

@@ -13,6 +13,17 @@ export default {
   },
   computed: mapState({
     menuOpen: state => state.header.menuOpen
-  })
+  }),
+  metaInfo: {
+    title: "VueFly",
+    titleTemplate: "%s | About Us",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Our Mission is to provide cater to business needs in the mostly simplest way possible. We are a group of 3 working tirelessly to solve your every day hurdles"
+      }
+    ]
+  }
 };
 </script>

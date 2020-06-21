@@ -1,3 +1,6 @@
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const path = require('path')
+
 module.exports = {
 	css: {
 		loaderOptions: {
@@ -19,12 +22,12 @@ module.exports = {
 			}
 		}
 	},
-	chainWebpack: config => {
-		config
-			.plugin('html')
-			.tap(args => {
-				args[0].title = 'VuFly'
-				return args
+	configureWebpack: {
+		plugins: [
+			new PrerenderSPAPlugin({
+				staticDir: path.join(__dirname, 'dist'),
+				routes: ['/', '/about', '/pricing', '/contact'],
 			})
+		]
 	}
 };

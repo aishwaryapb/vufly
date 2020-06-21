@@ -16,7 +16,18 @@ export default {
   },
   computed: mapState({
     menuOpen: state => state.header.menuOpen
-  })
+  }),
+  metaInfo: {
+    title: "VueFly",
+    titleTemplate: "%s | Contact us",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Request a free demo or get started with a subscription of this simple plug N' play solution which attends to any hurdle you want it to"
+      }
+    ]
+  }
 };
 </script>
 

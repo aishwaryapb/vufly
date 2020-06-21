@@ -28,6 +28,17 @@ export default {
     return {
       pricingItems: CONFIG.pricingModels
     };
+  },
+  metaInfo: {
+    title: "VueFly",
+    titleTemplate: "%s | Pricing",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Our pricing plan allows you to try the software for 30 days before paying $20 for the monthly subscription. What are you waiting for?"
+      }
+    ]
   }
 };
 </script>

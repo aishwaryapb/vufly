@@ -4,7 +4,7 @@ export default {
             id: 1,
             title: "Free",
             isPremium: false,
-            price: "$ 0",
+            price: "$0",
             subTitle:
                 "Integrate with our product for free gaining access to a rich set of features",
             features: [
@@ -34,7 +34,7 @@ export default {
             id: 2,
             title: "Premium",
             isPremium: true,
-            price: "$ 20",
+            price: "$20",
             subTitle:
                 "Gain access to all the free features and more. This completes all of your business needs. Includes 24x7 support and a dedicated team.",
             features: [
