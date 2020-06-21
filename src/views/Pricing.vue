@@ -30,7 +30,7 @@ export default {
     };
   },
   metaInfo: {
-    title: "VueFly",
+    title: "VuFly",
     titleTemplate: "%s | Pricing",
     meta: [
       {

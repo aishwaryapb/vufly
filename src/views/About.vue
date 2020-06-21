@@ -15,7 +15,7 @@ export default {
     menuOpen: state => state.header.menuOpen
   }),
   metaInfo: {
-    title: "VueFly",
+    title: "VuFly",
     titleTemplate: "%s | About Us",
     meta: [
       {
