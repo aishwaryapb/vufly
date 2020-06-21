@@ -70,6 +70,10 @@ export default {
       font-size: 16px;
       width: 100px;
     }
+
+    @media @ipadPro {
+      min-height: 15vh;
+    }
   }
 
   .features {
@@ -95,6 +99,34 @@ export default {
 
     font-size: 14px;
     color: @black;
+  }
+
+  @media @mobileL {
+    .container {
+      width: 80vw;
+    }
+
+    .features {
+      li {
+        margin: 4vh 2vw;
+      }
+
+      img {
+        margin: 0 2vw;
+      }
+    }
+  }
+
+  @media @tablet {
+    .container {
+      width: 40vw;
+    }
+  }
+
+  @media @ipadPro {
+    .container {
+      width: 40vw;
+    }
   }
 }
 

@@ -45,12 +45,52 @@ export default {
       font-size: 46px;
       font-weight: 400;
     }
+
+    @media @ipadPro {
+      height: 20vh;
+    }
   }
 
   .card-container {
     display: flex;
     justify-content: space-evenly;
     padding: 8vh 15vw 0 15vw;
+
+    @media @ipadPro {
+      padding: 4vh 5vw;
+    }
+  }
+
+  @media @mobileL {
+    .heading {
+      height: 35vh;
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+      }
+
+      p {
+        padding: 0 2vw;
+        margin-top: 2vh;
+      }
+    }
+
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 5vh 5vw;
+    }
+  }
+
+  @media @tablet {
+    .heading {
+      height: 30vh;
+    }
+
+    .card-container {
+      padding: 5vh 5vw;
+    }
   }
 }
 </style>

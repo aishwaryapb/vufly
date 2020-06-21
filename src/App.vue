@@ -58,6 +58,10 @@ body,
 
 .top-spacing {
   margin-top: 10vh;
+
+  @media @ipadPro {
+    margin-top: 4vh;
+  }
 }
 
 .router-link-exact-active {

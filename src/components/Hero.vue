@@ -39,6 +39,10 @@ export default {
   width: 100%;
   height: 100%;
 
+  @media @mobileL {
+    flex-direction: column-reverse;
+  }
+
   #hero-text {
     width: 45%;
     padding: 8vh 8vw;
@@ -68,6 +72,15 @@ export default {
     &:focus {
       outline: none;
     }
+
+    @media @mobileL {
+      width: auto;
+      padding: 4vh 4vw;
+
+      h1 {
+        font-size: 40px;
+      }
+    }
   }
 
   #hero-img {
@@ -78,6 +91,15 @@ export default {
     img {
       width: 45vw;
       height: auto;
+    }
+
+    @media @mobileL {
+      margin-top: 5vh;
+      width: auto;
+      flex-direction: row;
+      img {
+        width: 75vw;
+      }
     }
   }
 }

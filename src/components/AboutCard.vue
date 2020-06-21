@@ -23,6 +23,12 @@
 </template>
 
 <style lang="less" scoped>
+.flex {
+  @media @mobileL {
+    flex-direction: column;
+  }
+}
+
 #img-container {
   width: 60%;
   display: flex;
@@ -31,6 +37,23 @@
   img {
     width: 80vw;
     height: auto;
+  }
+
+  @media @mobileL {
+    width: auto;
+    justify-content: center;
+
+    img {
+      width: 100vw;
+    }
+  }
+
+  @media @tablet {
+    width: 40%;
+
+    img {
+      width: 40vw;
+    }
   }
 }
 
@@ -49,6 +72,14 @@
   p {
     color: @black;
     font-size: 14px;
+  }
+
+  @media @mobileL {
+    width: auto;
+  }
+
+  @media @tablet {
+    width: 60%;
   }
 }
 </style>

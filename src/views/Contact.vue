@@ -34,4 +34,33 @@ export default {
     font-weight: 400;
   }
 }
+
+@media @mobileL {
+  .form-container {
+    width: 90vw;
+    height: max-content;
+    padding-bottom: 4vh;
+  }
+}
+
+@media @tablet {
+  .form-container {
+    margin-top: 10vh;
+    width: 90vw;
+    height: max-content;
+    padding-bottom: 4vh;
+  }
+}
+
+@media @ipadPro {
+  .form-container {
+    width: 90vw;
+    height: max-content;
+    padding-bottom: 4vh;
+  }
+
+  .container {
+    background-repeat: no-repeat;
+  }
+}
 </style>
